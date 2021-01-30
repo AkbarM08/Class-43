@@ -3,7 +3,7 @@ var backgroundImage4, background4, backgroundImage5, background5, level;
 var player, playerImage;
 
 function preload(){
-   // playerImage = loadImage("player/plr.png")
+   playerImage = loadAnimation("plr/1.png","plr/2.png","plr/3.png","plr/4.png","plr/5.png","plr/6.png","plr/7.png")
     backgroundImage1 = loadImage("Background/Blue.png");
     backgroundImage2 = loadImage("Background/Gray.png");
     backgroundImage3 = loadImage("Background/Green.png");
@@ -13,9 +13,6 @@ function preload(){
 function setup(){
     createCanvas(windowWidth, windowHeight);
     level = 1;
-}
-function draw(){
-    //background("gray");
     if(level === 1){
         setBackground(backgroundImage1);
     }
@@ -33,8 +30,14 @@ function draw(){
     }
 
     player = createSprite(50,100,50,50);
+    player.addAnimation("move",playerImage)
+}
+function draw(){
+    //background("gray");
+    
+    
 
-    if(keyDown("space") && touches < 0){
+    if(keyDown("space") || touches < 0){
         player.velocityY = -13
         touches.length  = []
     }
