@@ -60,11 +60,7 @@ var jumpV;
         
         fanImage = loadImage("Traps/Fan/Off.png");
 
-        diesSound = loadSound("Sounds/mario_bros_die.mp3");
-        fruitSound = loadSound("Sounds/mario_coin.mp3");
-        flipSound = loadSound("Sounds/mario_flip.mp3");
-        jumpSound = loadSound("Sounds/mario_jump.mp3");
-        endSound = loadSound("Sounds/mario_1_up.mp3");
+       
     }
     function setup(){
         edges = createEdgeSprites();
@@ -300,7 +296,6 @@ var jumpV;
                 player.velocityY = 0;
                 gGN = 1;
                 score=score-1;
-                diesSound.play();
                 }
 
             player.collide(brickWall)
@@ -318,12 +313,12 @@ var jumpV;
                 player.velocityY = 0;
                 gGN = 1;
                 score=score-1;
-                diesSound.play();
+
             }
             if(player.isTouching(flag)){
                 level = 12;
                 score = score + 15
-                endSound.play();
+
             }
             }
 
@@ -498,7 +493,7 @@ var jumpV;
                     player.velocityY = 0;
                     gGN = 1;
                     score=score-1;
-                    diesSound.play();
+
                 }
 
                 if(player.isTouching(leftEdge) || player.isTouching(rightEdge) ){
@@ -508,7 +503,7 @@ var jumpV;
                     player.velocityY = 0;
                     gGN = 1;
                     score=score-1;
-                    diesSound.play();
+
                     }
 
                 player.collide(topEdge)
@@ -524,36 +519,34 @@ var jumpV;
                 if(player.isTouching(apple2)){
                     score ++
                     apple2.destroy()
-                    fruitSound.play();
                 }
     
                 if(player.isTouching(kiwi2)){
                     score ++
                     kiwi2.destroy()
-                    fruitSound.play();
                 }
                 
                 if(player.isTouching(orange2)){
                     score ++
                     orange2.destroy()
-                    fruitSound.play();
+
                 }
                 
                 if(player.isTouching(cherries2)){
                     score ++
                     cherries2.destroy()
-                    fruitSound.play();
+
                 }
                 if(player.isTouching(strawberry2)){
                     score ++
                     strawberry2.destroy()
-                    fruitSound.play();
+
                 }
 
                 if(player.isTouching(flag2)){
                     level = 23
                     score = score + 15
-                    endSound.play();
+
                 }
             }
 
@@ -619,7 +612,7 @@ var jumpV;
                     player.velocityY = 0;
                     gGN = 1;
                     score=score-1;
-                    diesSound.play();
+
                 }
                 player.collide(topEdge);
                 player.collide(bottomEdge);
@@ -648,60 +641,60 @@ var jumpV;
             if(player.isTouching(apple)){
                 score ++
                 apple.destroy()
-                fruitSound.play();
+
             }
             if(player.isTouching(kiwi)){
                 score ++
                 kiwi.destroy()
-                fruitSound.play();
+
             }
             
             if(player.isTouching(orange)){
                 score ++
                 orange.destroy()
-                fruitSound.play();
+
             }
             
             if(player.isTouching(cherries)){
                 score ++
                 cherries.destroy()
-                fruitSound.play();
+
             }
             if(player.isTouching(strawberry)){
                 score ++
                 strawberry.destroy()
-                fruitSound.play();
+
             }
 
             if(player.isTouching(apple_d)){
                 score ++
                 apple_d.destroy()
-                fruitSound.play();
+
             }
 
             
             if(player.isTouching(kiwi_d)){
                 score ++
                 kiwi_d.destroy()
-                fruitSound.play();
+
             }
             
             if(player.isTouching(orange_d)){
                 score ++
                 orange_d.destroy()
-                fruitSound.play();
+
             }
 
             
             if(player.isTouching(cherries_d)){
                 score ++
                 cherries_d.destroy()
-                fruitSound.play();
+
             }
             if(player.isTouching(strawberry_d)){
                 score ++
                 strawberry_d.destroy()
-                fruitSound.play();
+
             }
 
     }
